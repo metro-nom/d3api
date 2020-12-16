@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "http://schema.org/identifier",
+    "scope": "http://127.0.0.1:8082/base/scope",
+    "name": "http://127.0.0.1:8082/base/name",
+    "long_desc": "http://127.0.0.1:8082/base/long_desc",
+    "created": "http://127.0.0.1:8082/base/created",
+    "modified": "http://127.0.0.1:8082/base/modified",
+    "expire": "http://127.0.0.1:8082/base/expire",
+    "cached": "http://127.0.0.1:8082/base/cached",
+    "d3_type": "http://127.0.0.1:8082/base/d3_type",
+    "origin": "http://127.0.0.1:8082/base/origin",
+    "validNotBefore": "http://127.0.0.1:8082/base/validNotBefore",
+    "validNotAfter": "http://127.0.0.1:8082/base/validNotAfter",
+    "description": "http://127.0.0.1:8082/base/description",
+    "aspect": "http://127.0.0.1:8082/base/aspect",
+    "tags": "http://127.0.0.1:8082/base/tags",
+    "publisher": {
+        "@id": "http://127.0.0.1:8082/base/publisher",
+        "@container": "@set"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:12-alpine
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./init/sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ../tests/tmp_db/:/var/lib/postgresql/data
+    ports:
+      - "55432:5432"
+    networks:
+      - backend
+  context:
+    image: nginx:alpine
+    volumes:
+      - ./templates:/etc/nginx/templates
+      - ./init/html/context:/usr/share/nginx/html
+    ports:
+      - "8081:80"
+    networks:
+      - backend
+    environment:
+      - NGINX_HOST=context.example.org
+      - NGINX_PORT=80
+  schema:
+    image: nginx:alpine
+    volumes:
+      - ./templates:/etc/nginx/templates
+      - ./init/html/schema:/usr/share/nginx/html
+    ports:
+      - "8082:80"
+    networks:
+      - backend
+    environment:
+      - NGINX_HOST=schema.example.org
+      - NGINX_PORT=80
+  api:
+    build:
+      context: ${PWD}
+      dockerfile: docker/Dockerfile
+    environment:
+      FLASK_ENV: development
+      FLASK_APP: d3api.wsgi
+      FLASK_CONFIG: testing
+      D3API_SECRET: i_am_a_secret
+      D3API_DB_URI:  postgresql+psycopg2://postgres:postgres@db/postgres
+      D3URI_API: http://127.0.0.1:8083
+      D3URI_CONTEXT: http://127.0.0.1:8081
+      D3URI_SCHEMA: http://127.0.0.1:8082
+
+    volumes:
+      - .:/code
+      - ./d3api:/code/d3api
+    ports:
+      - "8083:8083"
+    networks:
+      - backend
+    depends_on:
+      - db
+      - context
+      - schema
+
+networks:
+  backend:
+
+volumes:
+  db-data:

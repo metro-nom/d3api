@@ -1,0 +1,6 @@
+.flaskenv
+.git
+.idea
+.pytest_cache
+.tox
+.virtualenvs

@@ -1,0 +1,51 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "http://schema.org/identifier",
+    "scope": "http://127.0.0.1:8082/product/scope",
+    "name": "http://127.0.0.1:8082/product/name",
+    "uid": "http://127.0.0.1:8082/product/uid",
+    "serial_number": "http://127.0.0.1:8082/product/serial_number",
+    "vendor": "http://127.0.0.1:8082/product/vendor",
+    "long_desc": "http://127.0.0.1:8082/product/long_desc",
+    "created": "http://127.0.0.1:8082/product/created",
+    "modified": "http://127.0.0.1:8082/product/modified",
+    "expire": "http://127.0.0.1:8082/product/expire",
+    "cached": "http://127.0.0.1:8082/product/cached",
+    "d3_type": "http://127.0.0.1:8082/product/d3_type",
+    "validNotBefore": "http://127.0.0.1:8082/product/validNotBefore",
+    "validNotAfter": "http://127.0.0.1:8082/product/validNotAfter",
+    "description": "http://127.0.0.1:8082/product/description",
+    "aspect": "http://127.0.0.1:8082/product/aspect",
+    "isPartOf": "http://127.0.0.1:8082/product/isPartOf",
+    "hasPart": {
+        "@id": "http://127.0.0.1:8082/product/hasPart",
+        "@container": "@set"
+    },
+    "url": "http://127.0.0.1:8082/product/url",
+    "dst": "http://127.0.0.1:8082/product/dst",
+    "nom_ns": "http://127.0.0.1:8082/product/nom_ns",
+    "nom_state": "http://127.0.0.1:8082/product/nom_state",
+    "containsProduct": "http://127.0.0.1:8082/product/containsProduct",
+    "containedIn": "http://127.0.0.1:8082/product/containedIn",
+    "providesFunction": {
+        "@id": "http://127.0.0.1:8082/product/providesFunction",
+        "@container": "@set"
+    },
+    "implementedBy": "http://127.0.0.1:8082/product/implementedBy",
+    "usesFunction": {
+        "@id": "http://127.0.0.1:8082/product/usesFunction",
+        "@container": "@set"
+    },
+    "usedBy": "http://127.0.0.1:8082/product/usedBy",
+    "tags": "http://127.0.0.1:8082/product/tags",
+    "publisher": "http://127.0.0.1:8082/product/publisher",
+    "properties": {
+        "@id": "http://127.0.0.1:8082/product/properties",
+        "@container": "@set"
+    },
+    "prop_id": "http://127.0.0.1:8082/product/prop_id",
+    "prop_val": "http://127.0.0.1:8082/product/prop_val",
+    "prop_validity": "http://127.0.0.1:8082/prop_validity"
+  }
+}

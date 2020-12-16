@@ -1,0 +1,50 @@
+[
+  {
+    "name": "FLASK_ENV",
+    "value": "production"
+  },
+  {
+    "name": "FLASK_CONFIG",
+    "value": "testing"
+  },
+  {
+    "name": "FLASK_APP",
+    "value": "d3api.wsgi:app"
+  },
+  {
+    "name": "D3API_SCHEMA_URL",
+    "value": "http://schema.example.com"
+  },
+  {
+    "name": "D3API_DB_URI",
+    "value": "ddd"
+  },
+  {
+    "name": "D3API_SECRET",
+    "value": "i-am-a-secret"
+  },
+  {
+    "name": "POSTGRES_DB",
+    "value": "postgres"
+  },
+  {
+    "name": "POSTGRES_USER",
+    "value": "postgres"
+  },
+  {
+    "name": "POSTGRES_HOSTNAME",
+    "value": "localhost"
+  },
+  {
+    "name": "POSTGRES_PORT",
+    "value": "55433"
+  },
+  {
+    "name": "POSTGRES_PASSWORD",
+    "value": "postgres"
+  },
+  {
+    "name": "APPLICATION_DB",
+    "value": "test2"
+  }
+]

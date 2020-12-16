@@ -1,0 +1,26 @@
+[
+  {
+    "name": "FLASK_ENV",
+    "value": "development"
+  },
+  {
+    "name": "FLASK_CONFIG",
+    "value": "development"
+  },
+  {
+    "name": "FLASK_APP",
+    "value": "d3api.wsgi:app"
+  },
+  {
+    "name": "D3API_SCHEMA_URL",
+    "value": "http://schema.example.com"
+  },
+  {
+    "name": "D3API_DB_URI",
+    "value": "cockroachdb://user:password@127.0.0.1:26257/database"
+  },
+  {
+    "name": "D3API_SECRET",
+    "value": "i-am-a-secret"
+  }
+]
